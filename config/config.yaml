@@ -1,0 +1,30 @@
+log:
+  context: true
+  level: debug
+
+core:
+  url_queue_size: 10
+  page_info_queue_size: 10
+  parsed_page_info_queue_size: 10
+  seed_file_path: "./seed.txt"
+  retry_task_scan_period: 300
+  task_timeout: 300
+  check_completed_period: 300
+
+database:
+  url: "postgres://crawler:123456@localhost:5432/crawler?sslmode=disable"
+
+storage:
+  location: "./pages"
+
+downloader:
+  worker: 3
+  timeout: 5
+  retry: 3
+
+analayer:
+  worker: 3
+
+controller:
+  worker: 3
+
